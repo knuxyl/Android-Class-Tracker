@@ -1,2 +1,4 @@
+<center>
 # Student Scheduler
-<img src="main.png" width="100" />
+<img src="main.png" width="200" />
+</center>
