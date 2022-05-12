@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="imageButtonStyle">@style/ImageButton</item>
+    </style>
+
+    <style name="ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+    </style>
+</resources>

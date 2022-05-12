@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">James Watson ABM2</string>
+    <string name="home_name">James Watson</string>
+    <string name="home_id">Student ID 001520415</string>
+    <string name="home_course">C196 - Mobile Application Development</string>
+    <string name="home_assessment">ABM2 - Mobile Application Development</string>
+
+</resources>

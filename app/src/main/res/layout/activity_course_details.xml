@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context=".Course.CourseDetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSaveCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editEndDateCourse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:enabled="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toStartOf="@+id/buttonDeleteEndDateCourse"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchEndDateCourse" />
+
+            <TextView
+
+                android:id="@+id/textEndDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="End Date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toBottomOf="@+id/switchEndDateCourse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/switchEndDateCourse" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAssessments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCreateAssessment" />
+
+            <EditText
+
+                android:id="@+id/editStartDateCourse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:enabled="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toStartOf="@+id/buttonDeleteStartDateCourse"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchStartDateCourse" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView1"
+                app:layout_constraintStart_toEndOf="@+id/textCountAssessments" />
+
+            <TextView
+                android:id="@+id/textTitleCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editTitleCourse"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textCountAssessments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView1"
+                app:layout_constraintStart_toEndOf="@+id/textView1" />
+
+            <EditText
+                android:id="@+id/editTitleCourse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textTitleCourse"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTerms" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Assessments ("
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonCreateAssessment"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textStartDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Start Date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toBottomOf="@+id/switchStartDateCourse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/switchStartDateCourse" />
+
+            <Button
+                android:id="@+id/buttonCreateAssessment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="buttonCreateAssessment"
+                android:text="Create"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/editInsEmail" />
+
+            <ImageButton
+                android:id="@+id/buttonStartDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:onClick="buttonStartDateCourse"
+                app:layout_constraintBottom_toBottomOf="@+id/editStartDateCourse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editStartDateCourse"
+                app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
+            <ImageButton
+                android:id="@+id/buttonEndDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:onClick="buttonEndDateCourse"
+                app:layout_constraintBottom_toBottomOf="@+id/editEndDateCourse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editEndDateCourse"
+                app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
+            <TextView
+                android:id="@+id/textHeaderCourse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="New Course"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonCourseNotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="buttonCourseNotes"
+                android:text="Notes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerStatusCourse" />
+
+            <TextView
+                android:id="@+id/textStatusCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Status"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerStatusCourse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spinnerStatusCourse" />
+
+            <Spinner
+                android:id="@+id/spinnerStatusCourse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonDeleteStatusCourse"
+                app:layout_constraintStart_toEndOf="@+id/textStatusCourse"
+                app:layout_constraintTop_toBottomOf="@+id/editEndDateCourse" />
+
+            <TextView
+                android:id="@+id/textInstructorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editInsName"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textInstructorPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editInsPhone"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textInstructorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editInsEmail"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editInsName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textInstructorName"
+                app:layout_constraintTop_toBottomOf="@+id/textInstructorInformation" />
+
+            <EditText
+                android:id="@+id/editInsPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textInstructorPhone"
+                app:layout_constraintTop_toBottomOf="@+id/editInsName" />
+
+            <EditText
+                android:id="@+id/editInsEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textInstructorEmail"
+                app:layout_constraintTop_toBottomOf="@+id/editInsPhone" />
+
+            <TextView
+                android:id="@+id/textInstructorInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Instructor information"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCourseNotes" />
+
+            <Spinner
+                android:id="@+id/spinnerTerms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textHeaderCourse" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Term"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerTerms"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spinnerTerms" />
+
+            <ImageButton
+                android:id="@+id/buttonDeleteStartDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:onClick="buttonDeleteStartDateCourse"
+                app:layout_constraintBottom_toBottomOf="@+id/editStartDateCourse"
+                app:layout_constraintEnd_toStartOf="@+id/buttonStartDateCourse"
+                app:layout_constraintTop_toTopOf="@+id/editStartDateCourse"
+                app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+            <ImageButton
+                android:id="@+id/buttonDeleteEndDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:onClick="buttonDeleteEndDateCourse"
+                app:layout_constraintBottom_toBottomOf="@+id/editEndDateCourse"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEndDateCourse"
+                app:layout_constraintTop_toTopOf="@+id/editEndDateCourse"
+                app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+            <Switch
+                android:id="@+id/switchStartDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:switchPadding="16dp"
+                android:text="Notify for Start Date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textStartDateCourse"
+                app:layout_constraintTop_toBottomOf="@+id/editTitleCourse" />
+
+            <ImageButton
+                android:id="@+id/buttonDeleteStatusCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:onClick="buttonDeleteStatusCourse"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerStatusCourse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spinnerStatusCourse"
+                app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+            <Switch
+                android:id="@+id/switchEndDateCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:switchPadding="16dp"
+                android:text="Notify for End Date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textEndDateCourse"
+                app:layout_constraintTop_toBottomOf="@+id/editStartDateCourse" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/buttonCancelCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="buttonCancelCourse"
+        android:text="Cancel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSaveCourse"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSaveCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/green"
+        android:onClick="buttonSaveCourse"
+        android:text="Save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancelCourse" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
