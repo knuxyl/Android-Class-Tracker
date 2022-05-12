@@ -1,2 +1,2 @@
 # Student Scheduler
-![Screenshot](main.png | width=200)
+<img src="main.png" width="100" />
