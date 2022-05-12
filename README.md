@@ -1,2 +1,2 @@
 # Student Scheduler
-![Alt text](maint.jpg?raw=true "Main screen")
+![Alt text](maint.png?raw=true "Main screen")
