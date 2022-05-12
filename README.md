@@ -1,1 +1,1 @@
-# Android-Class-Tracker
+# Student Scheduler
