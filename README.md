@@ -8,18 +8,10 @@ The application implements multidimensional functionality, local storage, and no
 The application is themed after WGU's official application.
 <br />
 <h3>Main screen</h3>
-<br />
 <img src="main.png" width="300" />
-<br />
 <h3>Term screen</h3>
-<br />
 <img src="term.png" width="300" />
-<br />
 <h3>Course screen</h3>
-<br />
 <img src="course.png" width="300" />
-<br />
 <h3>Storyboard</h3>
-<br />
 <img src="storyboard.png" width="300" />
-</p>
